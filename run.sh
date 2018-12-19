@@ -4,7 +4,7 @@ SOAP="$PROJECT_ROOT/soap"
 RESTful="$PROJECT_ROOT/rest"
 
 cd $SOAP
-javac soapserver\UserModel.java soapserver\UserController.java soapserver\UserControllerImpl.java soapserver\Publisher.java
+javac soapserver/UserModel.java soapserver/UserController.java soapserver/UserControllerImpl.java soapserver/Publisher.java
 java soapserver.Publisher &
 
 cd $RESTful
