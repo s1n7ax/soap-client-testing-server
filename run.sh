@@ -8,5 +8,5 @@ javac soapserver/UserModel.java soapserver/UserController.java soapserver/UserCo
 java soapserver.Publisher &
 
 cd $RESTful
-npm start
+npm start &
 

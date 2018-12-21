@@ -39,7 +39,6 @@ router.delete('/user', (req, res, next) => {
     }
 });
 
-
 router.put('/user', (req, res, next) => {
     try {
         let nUser = new Users(req.body.id, 
@@ -64,7 +63,23 @@ router.get('/download_excel', (req, res, next) => {
 router.get('/download_text', (req, res, next) => {
     let filePath = path.join(__dirname, "../", "files/sample text.txt");
     res.download(filePath);
-})
+});
 
+router.get('json', (req, res, next) => {
+    let json = {
+        "student1": {
+            "name": "bill",
+            "age": 28,
+            "married": false,
+            "contact": ["071992233", "071992283"],
+            "marks": {
+                "maths": 50,
+                "science": 50
+            }
+        }
+    };
+
+    res.send(json);
+});
 
 module.exports = router;
